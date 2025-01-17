@@ -51,6 +51,13 @@ install docker by following the instructions found here -> https://docs.docker.c
 
 <br />
 
+# to set up project
+
+run `kubectl apply -f mongo-config.yaml` to generate the config for the db
+run `kubectl apply -f mongo-secret.yaml` to generate the secret for the db
+run `kubectl apply -f mongo.yaml` to build the deployment and the service for the db
+finally run `kubectl apply -f webapp.yaml` to deploy the webapp
+
 > :warning: **Known issue - Minikube IP not accessible**
 
 If you can't access the NodePort service webapp with `MinikubeIP:NodePort`, execute the following command:
